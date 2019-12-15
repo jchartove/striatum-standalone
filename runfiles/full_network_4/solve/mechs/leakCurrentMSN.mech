@@ -1,0 +1,10 @@
+% leakCurrentMSN
+
+% parameters
+g_l = 0.1;
+E_l = -67;
+
+% current
+leakCurrentMSN(X)=g_l*(X-E_l)
+
+@current += -leakCurrentMSN(X)

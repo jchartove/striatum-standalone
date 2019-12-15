@@ -1,0 +1,11 @@
+% dendSomaiCOM:  compartmental conductance from dendrite to soma of FSI
+
+% Parameters
+gCOM = [0.5]
+
+%connectivity mask
+dendSomaICOM(IN,OUT) = gCOM.*(IN-OUT)
+
+%current
+@current += dendSomaICOM(IN,OUT)
+ 

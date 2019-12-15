@@ -1,0 +1,11 @@
+%somaInput for FSIs
+
+%parameters
+soma_tonic = [0]
+dummyvar = [0]
+DA = [0.5]
+
+%current
+somaInput(t) = soma_tonic
+
+@current += somaInput(t)
