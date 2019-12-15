@@ -40,14 +40,14 @@ g_m = 1.3; % 1.2 parkinsonian, 1.3 normal
 spec.nodes(3).name = 'D1';
 spec.nodes(3).size = ncells;
 spec.nodes(3).equations = 'dV/dt = (Iapp + @current )/Cm;I=0; Cm=1; V(0)=-63'; %+ 63.*rand(1,Npop)
-spec.nodes(3).mechanism_list = {'naCurrentMSN','kCurrentMSN','mCurrentMSN','leakCurrentMSN','injectedCurrentD1','noisyInputMSN','AMPAMSN'};
+spec.nodes(3).mechanism_list = {'naCurrentMSN','kCurrentMSN','mCurrentMSN','leakCurrentMSN','injectedCurrentD1','noisyInputMSN'};
 spec.nodes(3).parameters = {'cm',1,'V_IC',-63,'g_m',g_m,'Tfinal', T0, 'Iapp',0}; % V_IC refers to the initial condition for the membrane 
 
 %D2 SPNs
 spec.nodes(4).name = 'D2';
 spec.nodes(4).size = ncells;
 spec.nodes(4).equations = 'dV/dt = (Iapp + @current )/Cm;I=0; Cm=1; V(0)=-63'; %+ 63.*rand(1,Npop)
-spec.nodes(4).mechanism_list = {'naCurrentMSN','kCurrentMSN','mCurrentMSN','leakCurrentMSN','injectedCurrentD2','noisyInputMSN','AMPAMSN'};
+spec.nodes(4).mechanism_list = {'naCurrentMSN','kCurrentMSN','mCurrentMSN','leakCurrentMSN','injectedCurrentD2','noisyInputMSN'};
 spec.nodes(4).parameters = {'cm',1,'V_IC',-63,'g_m',g_m,'Tfinal', T0, 'Iapp',0}; % V_IC refers to the initial condition for the membrane potential
 
 %FSI to FSI inhibitory synapses
@@ -106,7 +106,7 @@ vary={
 
 % Set simulation parameters
 memlimit = '64G';
-cluster_flag = 1; %if you have access to a scientific computing cluster, change this to 1
+cluster_flag = 0; %if you have access to a scientific computing cluster, change this to 1
 overwrite_flag = 0;
 save_data_flag = 1;
 save_results_flag = 1;
@@ -120,7 +120,7 @@ qsub_mode = 'array';
 
 % run the simulation
 dsSimulate(spec,...
-              'save_data_flag',save_data_flag,'study_dir','full_network_4',...
+              'save_data_flag',save_data_flag,'study_dir','full_network',...
               'cluster_flag',cluster_flag,'verbose_flag',verbose_flag,...
               'overwrite_flag',overwrite_flag,'tspan',[0 T0],...
               'save_results_flag',save_results_flag,'solver','rk4',...
