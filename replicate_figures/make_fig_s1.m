@@ -8,8 +8,8 @@
 %(A) Plot of normalized low frequency (<10 Hz) power of the voltage of a single model FSI (blue) 
 %and the summed voltages of the high DA FSI network (red) as Poisson noise of varying rate is applied. 
 % Each cell in the network receives the same amount of noise that the isolated cell receives. 
-% I_app = 14 muA/cm2 for all simulations; in the high DA FSI network, g_GJ = 0.3 nS, 
-% g_syn = 0.005 nS. The solid line represents the mean value over 10 simulations per point. Shading 
+% I_app = 14 muA/cm2 for all simulations; in the high DA FSI network, g_GJ = 0.3 mS/cm^2, 
+% g_syn = 0.005 mS/cm^2. The solid line represents the mean value over 10 simulations per point. Shading 
 % represents standard deviation from these means. Power spectra are derived using Thomson’s multitaper 
 % power spectral density (PSD) estimate (MATLAB function pmtm).
 %(B) Plot of normalized low frequency (<10 Hz) power of the voltage of a single model FSI 

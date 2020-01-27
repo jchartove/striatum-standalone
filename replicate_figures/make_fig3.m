@@ -9,10 +9,10 @@
 %(B) gap junction conductance, and 
 %(C) GABAA conductance.
 %The parameters not being varied in plots A-C are held at the high DA values (Iapp = 14
-%muA=cm2, gGJ = 0.3 nS, gsyn = 0.005 nS, taugaba = 13 ms. The solid line represents the
+%muA=cm2, gGJ = 0.3 mS/cm^2, gsyn = 0.005 mS/cm^2, taugaba = 13 ms. The solid line represents the
 %mean value over 10 simulations per point. Shading represents standard deviation from these means. 
 %(D) Gamma frequency as a function of GABAa synaptic time constant and level of dopamine. High DA 
-%values are as previously stated; low DA values are Iapp = 7 muA=cm2, gGJ = 0.15 nS, gsyn = 0.1 nS.
+%values are as previously stated; low DA values are Iapp = 7 muA=cm2, gGJ = 0.15 mS/cm^2, gsyn = 0.1 mS/cm^2.
 %
 %input matrices should be 10 columns, number of rows = length of x axis
 
@@ -77,7 +77,7 @@ subplot1 = subplot(2,4,6);
 hold(subplot1,'on');
 plot(X1,YMatrix1(:,1),'LineWidth',2,'DisplayName','\gamma power');
 errorghost(ggap_gamma_stats',X1,'b');
-xlabel('g_{GJ} (nS)');
+xlabel('g_{GJ} (mS/cm^2)');
 axis(subplot1,'tight');
 ylim([0 0.07]);
 yyaxis right
@@ -89,7 +89,7 @@ subplot2 = subplot(2,4,2);
 hold(subplot2,'on');
 plot(X1,mean(ggap_theta_stats'),'LineWidth',2,'DisplayName','\delta/\thetapower');
 errorghost(ggap_theta_stats',X1,'b');
-xlabel('g_{GJ} (nS)');
+xlabel('g_{GJ} (mS/cm^2)');
 axis(subplot2,'tight');
 ylim([0 0.02])
 yyaxis right
@@ -103,7 +103,7 @@ hold(subplot3,'on');
 plot3 = plot(X2,YMatrix2(:,1),'LineWidth',2);
 set(plot3(1),'DisplayName','\gamma Power');
 errorghost(gsyn_gamma_stats',X2,'b');
-xlabel('g_{GABA_a} (nS)');
+xlabel('g_{GABA_a} (mS/cm^2)');
 axis(subplot3,'tight');
 ylim([0 0.07]);
 yyaxis right
@@ -117,7 +117,7 @@ hold(subplot4,'on');
 plot4 = plot(X2,YMatrix2(:,2),'LineWidth',2);
 set(plot4(1),'DisplayName','\delta/\theta Power');
 errorghost(gsyn_theta_stats',X2,'b');
-xlabel('g_{GABA_a} (nS)');
+xlabel('g_{GABA_a} (mS/cm^2)');
 axis(subplot4,'tight');
 ylim([0 0.02])
 yyaxis right

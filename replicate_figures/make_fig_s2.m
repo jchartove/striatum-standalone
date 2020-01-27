@@ -12,11 +12,11 @@
 %(E) heterogeneity in applied current. 
 %For heterogeneity values, 0 represents completely
 %uniform values and 1 represents a level of heterogeneity where values vary between zero
-%and twice the default value. Default leak current conductance is 0.25 nS and default D
-%current conductance is 6 nS; default applied current is 7 mA=cm2 for low DA and 14
+%and twice the default value. Default leak current conductance is 0.25 mS/cm^2 and default D
+%current conductance is 6 mS/cm^2; default applied current is 7 mA=cm2 for low DA and 14
 %mA=cm2 for high DA. The parameters not being varied in plots A-C are held at either
-%the high DA values (solid lines, Iapp = 14 muA=cm2, ggap = 0.3 nS, gsyn = 0.005 nS) or
-%the low DA values (dotted lines, Iapp = 7 muA=cm2, ggap = 0.15 nS, gsyn = 0.1 nS),
+%the high DA values (solid lines, Iapp = 14 muA=cm2, ggap = 0.3 mS/cm^2, gsyn = 0.005 mS/cm^2) or
+%the low DA values (dotted lines, Iapp = 7 muA=cm2, ggap = 0.15 mS/cm^2, gsyn = 0.1 mS/cm^2),
 %according to the legend. The solid line represents the mean value over 10 simulations
 %per point. Shading represents standard deviation from these means. Power spectra are
 %derived using Thomson’s multitaper power spectral density (PSD) estimate (MATLAB function pmtm).
